@@ -16,8 +16,6 @@ function init() {
     });
 
     dz.on("complete", function (file) {
-        let imageData = file.dataURL
-        
         var url = "http://127.0.0.1:5000/classify";
         $.post(url, {
             image_data: file.dataURL
@@ -30,7 +28,15 @@ function init() {
                 $("#error").show();
                 return;
             }
-            let players = ["lionel_messi", "maria_sharapova", "roger_federer", "serena_williams", "virat_kohli"];
+            let players = ['ben_afflek',
+            'jerry_seinfeld',
+            'lionel_messi',
+            'madonna',
+            'maria_sharapova',
+            'mindy_kaling',
+            'roger_federer',
+            'serena_williams',
+            'virat_kohli'];
             
             let match = null;
             let bestScore = -1;
@@ -39,13 +45,13 @@ function init() {
                 if(maxScoreForThisClass>bestScore) {
                     match = data[i];
                     bestScore = maxScoreForThisClass;
-                }
+                }   
             }
             if (match) {
                 $("#error").hide();
                 $("#resultHolder").show();
                 $("#divClassTable").show();
-                $("#resultHolder").html($(`[data-player="${match.class}"`).html());
+                $("#resultHolder").html($("[data-player='${match.class}'").html());
                 let classDictionary = match.class_dictionary;
                 for(let index in classDictionary) {
                     // let index = classDictionary[personName];
@@ -68,7 +74,7 @@ function init() {
 $(document).ready(function() {
     console.log( "ready!" );
     $("#error").hide();
-    $("#resultHolder").hide();
+    // $("#resultHolder").hide();
     $("#divClassTable").hide();
 
     init();

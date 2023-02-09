@@ -30,7 +30,7 @@ def load_model():
     global __model
     
     if __model is None:
-        with open("./artifacts/Model_LR.sav", 'rb') as f:
+        with open("./artifacts/Model_LR_Demo.sav", 'rb') as f:
             __model = joblib.load(f)
     print("MODEL LOADED.......READY")
     
@@ -83,6 +83,6 @@ def b64_image():
 
 if __name__ == '__main__':
     load_model()
-    # code = classify_img(None, "J:\Study Material\Machine Learning Project\Image Classifier ML-based\server\\test images\\643791-641790-roger-federer-aus-open-2018-afp.jpg")
-    # print(code)
+    code = classify_img(None, 'J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Cropped Images\\ben_afflek\\ben_afflek1.jpg')
+    print(code)
     

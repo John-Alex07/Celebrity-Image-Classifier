@@ -8,7 +8,7 @@ def classify_img():
     image_data = request.form['image_data']
     
     response = jsonify(util.classify_img(image_data))
-    # response.headers.add('Access-Control-ALlow-Origin', '*')
+    response.headers.add('Access-Control-ALlow-Origin', '*')
     return response
 
 
