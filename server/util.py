@@ -23,14 +23,14 @@ def load_model():
     global __class_codes
     global __class_decodes
     
-    with open("./artifacts/class_dict.json", "r") as f:
+    with open("J:\\Study Material\\Machine Learning Project\\Celebrity Image Classifier\\server\\artifacts\class_dict.json", "r") as f:
         __class_codes = json.load(f)
         __class_decodes = {v : k for k,v in __class_codes.items()}
         
     global __model
     
     if __model is None:
-        with open("./artifacts/Model_LR_Demo.sav", 'rb') as f:
+        with open("J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Deep_Model.sav", 'rb') as f:
             __model = joblib.load(f)
     print("MODEL LOADED.......READY")
     
@@ -66,11 +66,15 @@ def classify_img(b64_img, path=None):
         img_har = wavelett_trans(img)
         scaled_har_img = cv2.resize(img_har, (32,32))
         stack_img = np.vstack((scaled_raw_img.reshape(32*32*3, 1), scaled_har_img.reshape(32*32, 1)))
-        len_img = 32*32*3 + 32*32
-        fin_img = stack_img.reshape(1, len_img).astype(float)
+        # len_img = 32*32*3 + 32*32
+        fin_img = stack_img.reshape(1,64, 64)
+        fin_img = np.array(fin_img, dtype=np.uint8)
+        # print(fin_img.shape)
+        list_prob = __model.predict(fin_img)
+        list_prob = np.array(list_prob*100, int)[0].tolist()
         result.append({
-            'class': decode_celeb(__model.predict(fin_img)[0]),
-            'class_probability': np.around(__model.predict_proba(fin_img)*100,2).tolist()[0],
+            'class': decode_celeb(np.argmax(__model.predict(fin_img)[0])),
+            'class_probability': list_prob,
             'class_dictionary': __class_decodes
         })
     return result
@@ -83,6 +87,8 @@ def b64_image():
 
 if __name__ == '__main__':
     load_model()
-    code = classify_img(None, 'J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Cropped Images\\ben_afflek\\ben_afflek1.jpg')
-    print(code)
+    #code = classify_img(None, 'J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Image DataSet\\ben_afflek\httpsuploadwikimediaorgwikipediacommonsthumbddBenAffleckbyGageSkidmorejpgpxBenAffleckbyGageSkidmorejpg.jpg')
+    #code = classify_img(None, 'J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Image DataSet\\roger_federer\Federer_640.jpg')
+    #code = classify_img(None, 'J:\Study Material\Machine Learning Project\Celebrity Image Classifier\Image DataSet\lionel_messi\lionel-messi-net-worth-1.jpg')
+    #print(code)
     

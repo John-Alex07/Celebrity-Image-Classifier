@@ -3,9 +3,9 @@
     margin: 10% 0;
   }
   
-/* You can adjust the image size by increasing/decreasing the width, height */
+
 .custom-circle-image {
-  width: 7vw; /* note i used vw not px for better responsive */
+  width: 7vw;
   height: 7vw;
 }
 
@@ -29,7 +29,7 @@
 
 .dropzone {
   border-style: dashed;
-  color: rgb(18, 18, 18);
+  color: rgb(0, 0, 0);
 }
 
 

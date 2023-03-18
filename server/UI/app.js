@@ -51,7 +51,7 @@ function init() {
                 $("#error").hide();
                 $("#resultHolder").show();
                 $("#divClassTable").show();
-                $("#resultHolder").html($("[data-player='${match.class}'").html());
+                $("#resultHolder").html($("[data-player='${match.class}']").html());
                 let classDictionary = match.class_dictionary;
                 for(let index in classDictionary) {
                     // let index = classDictionary[personName];
@@ -74,7 +74,7 @@ function init() {
 $(document).ready(function() {
     console.log( "ready!" );
     $("#error").hide();
-    // $("#resultHolder").hide();
+    $("#resultHolder").hide();
     $("#divClassTable").hide();
 
     init();
