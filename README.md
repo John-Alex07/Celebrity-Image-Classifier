@@ -1,6 +1,6 @@
 # Celebrity Image Classifier
 
-![Celebrity Image Classifier](https://your-image-url.com)
+![Celebrity Image Classifier](https://github.com/John-Alex07/Portfolio/blob/master/static/img/portfolio/portfolio-1.jpg)
 
 ## Overview
 
@@ -28,16 +28,3 @@ The images undergo preprocessing, including resizing to a normalized size (32 X 
 
 The X and Y data are fed into different machine learning algorithms, including Random Forest Classifier, Logistic Regression, and Support Vector Classifier. GridSearchCV is employed for hyperparameter optimization, ensuring the best algorithm is selected for the project. Pipelining is used to automate dataset scaling and hyperparameter optimization.
 
-## Project Structure
-
-- **/data**: Contains the raw and cropped celebrity image datasets.
-- **/models**: Stores the trained machine learning and deep learning models.
-- **/utils**: Utility functions and scripts for image processing and feature extraction.
-
-## Getting Started
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/celebrity-image-classifier.git
-   cd celebrity-image-classifier
