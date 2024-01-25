@@ -1,6 +1,6 @@
 # Celebrity Image Classifier
 
-![Celebrity Image Classifier](https://github.com/John-Alex07/Portfolio/blob/master/static/img/portfolio/portfolio-4.jpg)
+<img src="https://github.com/John-Alex07/Portfolio/blob/master/static/img/portfolio/portfolio-4.jpg" alt="Project Image" width="600" height="400">
 
 ## Overview
 
