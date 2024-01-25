@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository presents a Celebrity Image Classifier that utilizes both traditional Machine Learning and Deep Learning techniques. The project involves preprocessing celebrity images using OpenCV, employing Haar Cascade for the Machine Learning part, and implementing an Artificial Neural Network (ANN) for Deep Learning. The dataset comprises labeled images of five prominent celebrities.
+This repository presents a Celebrity Image Classifier that utilizes both traditional Machine Learning and Deep Learning techniques. The project involves preprocessing celebrity images using OpenCV, employing Haar Cascade for the Machine Learning part, and implementing an Artificial Neural Network (ANN) for Deep Learning. The dataset comprises labeled images of nine prominent celebrities.
 # Celebrity Labels
 
 Here are the labels assigned to each celebrity for reference:
@@ -39,7 +39,7 @@ Wavelet transformation is applied to the cropped celebrity images for extracting
 
 ### 4. Developing Training and Testing Data
 
-The images undergo preprocessing, including resizing to a normalized size (32 X 32), and are stacked vertically to optimize the dataset. The dataset is divided into input data (X) and labels (Y), where celebrity names are encoded from [0 — 4].
+The images undergo preprocessing, including resizing to a normalized size (32 X 32), and are stacked vertically to optimize the dataset. The dataset is divided into input data (X) and labels (Y), where celebrity names are encoded from [0 — 8].
 
 ### 5. Training the Model using GridSearchCV
 
