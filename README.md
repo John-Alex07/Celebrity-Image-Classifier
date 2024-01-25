@@ -64,7 +64,7 @@ model_cnn.compile(optimizer=opt,
               metrics=['accuracy'])
 ```
 
-# Model Evaluation
+# CNN Model Evaluation
 
 Here's the detailed classification report showcasing the model's performance:
 
@@ -83,5 +83,18 @@ Here's the detailed classification report showcasing the model's performance:
 - **Accuracy**: 0.89
 - **Macro Avg**: 0.92, 0.81, 0.82, 221
 - **Weighted Avg**: 0.90, 0.89, 0.88, 221
+
+# Machine Learning Model Evaluation
+
+Here's a summary of the accuracy for different models:
+
+| Model                | Accuracy |
+|----------------------|----------|
+| SVM                  | 0.805970 |
+| Random Forest        | 0.686567 |
+| Logistic Regression  | 0.805970 |
+| AdaBoost             | 0.492537 |
+| LightGBM             | 0.701493 |
+| KNN                  | 0.582090 |
 
 
