@@ -64,3 +64,24 @@ model_cnn.compile(optimizer=opt,
               metrics=['accuracy'])
 ```
 
+# Model Evaluation
+
+Here's the detailed classification report showcasing the model's performance:
+
+| Celebrity         | Precision | Recall | F1-Score | Support |
+|-------------------|-----------|--------|----------|---------|
+| ben_afflek        | 1.00      | 0.14   | 0.25     | 7       |
+| jerry_seinfeld    | 1.00      | 0.94   | 0.97     | 18      |
+| lionel_messi      | 0.85      | 0.83   | 0.84     | 35      |
+| madonna           | 1.00      | 0.64   | 0.78     | 11      |
+| maria_sharapova   | 0.82      | 1.00   | 0.90     | 32      |
+| mindy_kaling      | 0.94      | 0.89   | 0.92     | 19      |
+| roger_federer     | 0.87      | 0.93   | 0.90     | 29      |
+| serena_williams   | 0.93      | 0.89   | 0.91     | 28      |
+| virat_kohli       | 0.87      | 0.98   | 0.92     | 42      |
+
+- **Accuracy**: 0.89
+- **Macro Avg**: 0.92, 0.81, 0.82, 221
+- **Weighted Avg**: 0.90, 0.89, 0.88, 221
+
+
