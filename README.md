@@ -92,9 +92,12 @@ Here's a summary of the accuracy for different models:
 |----------------------|----------|
 | SVM                  | 0.805970 |
 | Random Forest        | 0.686567 |
-| Logistic Regression  | 0.805970 |
+| Logistic Regression  | 0.809970 |
 | AdaBoost             | 0.492537 |
 | LightGBM             | 0.701493 |
 | KNN                  | 0.582090 |
 
+# Conclusion
+This project portrays a comparative study between the machine learning models and the deep learning models. The customised CNN model outperforms the Machine Learning models, however the performance of the model can be further improved with the help of a larger dataset. The limitations of the dataset impacts the evaluation of both the machine learning models as well as the deep learning models.
+Out of the machine learning models, the performance of SVM and Logistic Regression is the best.
 
